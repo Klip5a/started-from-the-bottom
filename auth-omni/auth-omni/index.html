@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="build/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="auth-block">
+      <a href="#" class="auth-block__return">Вернуться</a>
+      <div class="auth-form">
+        <form action="#">
+          <div class="auth-form__img">
+            <img src="build/img/maxresdefault.png" alt="Logo">
+          </div>
+          <div class="auth-form__group">
+            <input required id="phone" type="text" class="auth-form__input" placeholder=" " value=""
+              pattern="\d{1}\s\(\s\d{3}\s\)\s\d{3}-\d{2}-\d{2}$" title="8 ( 888 ) 888-88-88" onkeyup='checkParams()'>
+            <label for="phone">Номер телефона</label>
+          </div>
+          <div class="auth-form__group">
+            <input id="password" type="password" class="auth-form__input" value="" maxlength="5" placeholder="Пароль"
+              onkeyup='checkParams()' required>
+          </div>
+          <div class="auth-check">
+            <input type="checkbox" class="auth-form__check" id="check">
+            <label for="check">Запомнить</label>
+            <a href="" class="auth-form__reset-password">Забыл пароль</a>
+          </div>
+          <input id="btn" type="submit" class="auth-form__btn" value="Войти">
+        </form>
+      </div>
+      <div class="blur"></div>
+      <div class="bg-white"></div>
+    </section>
+  </div>
+
+
+  <script src="build/js/script.js"></script>
+</body>
+
+</html>

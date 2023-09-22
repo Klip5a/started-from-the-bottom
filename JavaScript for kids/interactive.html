@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Интерактивное программирование</title>
+</head>
+
+<body>
+    <h1 id="heading">Привет, мир!</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    </script>
+    <script>
+        // Скоро здесь будет JavaScript-код
+        let leftOffset = 0;
+        let topOffset = 0;
+        let dir = "white";
+        // Задаем движение заголовку
+        let moveHeading = function () {
+            $("#heading").offset({ left: leftOffset, top: topOffset });
+            if (dir === "white") leftOffset++;
+            else leftOffset--;
+            if (leftOffset < 0 && topOffset > 0) {
+                leftOffset = 0;
+                topOffset--;
+            } else if (topOffset === 0) {
+                dir = "white";
+            }
+            if (leftOffset > 200) {
+                leftOffset = 200;
+                topOffset++;
+                if (topOffset > 200) {
+                    topOffset = 200;
+                    dir = "black";
+                } else if (topOffset < 0) {
+                    topOffset = 0;
+                }
+            }
+        };
+
+        setInterval(moveHeading, 50);
+        // Кол-во кликов
+        let numberClick = 0;
+        // Увеличение скорости движения заголовка
+        $("#heading").click(function () {
+            clearInterval(moveHeading, 50);
+            setInterval(function () {
+                moveHeading();
+            }, 10);
+            numberClick++;
+            // 
+            if (numberClick === 10) {
+                alert("Вы победили!");
+                clearInterval(moveHeading, 50);
+            }
+        });
+    </script>
+</body>
+
+</html>

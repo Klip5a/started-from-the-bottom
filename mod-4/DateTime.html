@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="current"></p>
+    <script type="text/javascript">
+    
+        function updateTime(){
+            const day = new Date();
+            const month = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+            const weekday = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+            const hours = ["час", "часа", "часов"];
+            const minutes = ["минутa", "минуты", "минут"];
+            const seconds = ["секунда", "секунды", "секунд"];
+
+            function num2str(n, text_forms) {
+                n      = Math.abs(n) % 100;
+                var n1 = n % 10;
+                
+                if (n > 10 && n < 20) {
+                    return text_forms[2];
+                }
+                
+                if (n1 > 1 && n1 < 5) {
+                    return text_forms[1];
+                }
+                
+                if (n1 == 1) {
+                    return text_forms[0];
+                }
+                
+                return text_forms[2];
+            }
+
+            dateTime = ("Сегодня " + day.getDate() + " " + month[day.getMonth()] + " " + day.getFullYear() + " года, " + weekday[day.getDay()] + ", " + day.getHours() + " " + num2str(day.getHours(), hours) + " " + day.getMinutes() + " " + num2str(day.getMinutes(), minutes) + " " + day.getSeconds() + " " + num2str(day.getSeconds(), seconds));
+            document.getElementById("current").innerHTML = dateTime;
+        }
+
+        setInterval(updateTime, 1000);
+        
+    </script>
+</body>
+</html>

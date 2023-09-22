@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viselica</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>(виселица)</p>
+    <script>
+        // Создаем массив со словами
+        // let words = [
+        //     "программа",
+        //     "макака",
+        //     "прекрасный",
+        //     "оладушек",
+        //     "писюн",
+        //     "бебека"
+        // ];
+
+        // // Выбираем случайное слово
+        // let word = words[Math.floor(Math.random() * words.length)];
+
+        // // Создаем итоговый массив
+        // let answerArray = [];
+        // for (let i = 0; i < word.length; i++) {
+        //     answerArray[i] = "_";
+        // }
+        // // Задаем количество букв, которое надо угадать
+        // let remainingLetters = word.length;
+        // // Создаем доп переменную 
+        // let newRemainingLetters = remainingLetters;
+
+        // //Создадим переменную с количеством жизней
+        // let numberOfAttempts = 10;
+
+        // // Игровой цикл
+        // while ((remainingLetters > 0) && (numberOfAttempts > 0)) {
+        //     // Показываем состояние игры
+        //     // alert(answerArray.join(" "));
+        //     alert("Число попыток: " + numberOfAttempts + "\n" + answerArray.join(" ") + 
+        //     "\n" + remainingLetters + " Букв");
+        //     // Запрашиваем вариант ответа
+        //     let guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.").toLowerCase();
+        //     if (guess === null) {
+        //         // Выходим из игрового цикла    
+        //         break;
+        //     } else if (guess.length !== 1) {
+        //         alert("Пожалуйста, введите только одну букву.");
+        //     } else {
+        //         // Обновляем состояние игры
+        //         for (let j = 0; j < word.length; j++) { 
+        //             let letterWasEntered = answerArray[j] === guess;
+        //             if (letterWasEntered) {
+        //                 alert("Вы уже вводили эту букву");
+        //                 break;
+        //             }
+        //             if (word[j] === guess) {
+        //                 answerArray[j] = guess;
+        //                 remainingLetters--;
+        //             }
+        //         }
+        //     }
+        //     // Проверяем, уменьшилось ли количество оставшихся букв, которые надо отгадать
+        //     if (remainingLetters === newRemainingLetters) {
+        //         numberOfAttempts--;
+        //     }
+        //     // Обновляем  доп переменную с количеством оставшихся букв
+        //     newRemainingLetters = remainingLetters;
+        // }
+
+        // if (numberOfAttempts === 0) {
+        //     alert("Закончились попытки! Было загадано слово " + word);
+        // } else if (remainingLetters === 0 ) {
+        //     alert("Отлично! Было загадано слово " + word);
+        // } else {
+        //     alert("ПАКА НАХУЙ!")
+        // }
+
+        // alert(answerArray.join(" "));
+        // alert("Отлично! Было загадано слово " + word);
+        //
+        // 
+
+
+
+        // Создайте здесь свои функции
+        // let pickWord = function () {
+        //     // Возвращает случайно выбранное слово
+        //     let words = [
+        //         "программа",
+        //         "макака",
+        //         "прекрасный",
+        //         "оладушек",
+        //         "писюн",
+        //         "бебека"
+        //     ];
+        //     return words[Math.floor(Math.random() * words.length)];
+        // };
+        // let setupAnswerArray = function (word) {
+        //     // Возвращает итоговый массив для заданного слова word
+        //     let answerArray = [];
+        //     for (let i = 0; i < word.length; i++) {
+        //         answerArray[i] = "_";
+        //     }
+
+        //     return answerArray;
+        // };
+        // let showPlayerProgress = function (answerArray) {
+        //     // С помощью alert отображает текущее состояние игры
+        //     alert(answerArray.join(" "));
+        // };
+        // let getGuess = function () {
+        //     // Запрашивает ответ игрока с помощью prompt
+        //     return prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
+        // };
+        // let updateGameState = function (guess, word, answerArray) {
+        //     // Обновляет answerArray согласно ответу игрока (guess)
+        //     // возвращает число, обозначающее, сколько раз буква guess
+        //     // встречается в слове, чтобы можно было обновить значение
+        //     // remainingLetters
+        //     let letterWasEntered = 0;
+        //     for (let j = 0; j < word.length; j++) { 
+        //         if (word[j] === guess) {
+        //             answerArray[j] = guess;
+        //             letterWasEntered++;
+        //         }
+        //     }
+        //     return letterWasEntered;
+        // };
+        // let showAnswerAndCongratulatePlayer = function (answerArray) {
+        //     // С помощью alert показывает игроку отгаданное слово
+        //     // и поздравляет его с победой
+        //     showPlayerProgress(answerArray);
+        //     alert("Отлично! Было загадано слово " + alert(answerArray.join(" ")));
+        // };
+        // // word: загаданное слово
+        // let word = pickWord();
+        // // answerArray: итоговый массив
+        // let answerArray = setupAnswerArray(word);
+        // // remainingLetters: сколько букв осталось угадать
+        // let remainingLetters = word.length;
+        // // numberOfAttempts: число попыток
+        // let numberOfAttempts = 10;
+
+        // while ((remainingLetters > 0) && (numberOfAttempts > 0)) {
+        // // while (remainingLetters > 0) {
+        //     showPlayerProgress(answerArray);
+        //     // guess: ответ игрока
+        //     let guess = getGuess();
+        //     if (guess === null) {
+        //         break;
+        //     } else if (guess.length !== 1) {
+        //         alert("Пожалуйста, введите одиночную букву.");
+        //     } else {
+        //         // correctGuesses: количество открытых букв
+        //         guess = guess.toLowerCase();
+        //         let correctGuesses = updateGameState(guess, word, answerArray);
+        //         remainingLetters -= correctGuesses;
+        //         if (!correctGuesses) numberOfAttempts--;
+        //         alert ("Осталось " +numberOfAttempts+ " попыток");
+        //     }
+        // }
+
+        // alert(answerArray.join(" "));
+
+        // if (numberOfAttempts > 0) {
+        //     alert("Отлично! Было загадано слово " + word);
+        // } else {
+        //     alert("Плохо! Вас повесили! Было загадано слово " + word);
+        // }
+
+        // // if (numberOfAttempts === 0) {
+        // //     alert("Закончились попытки! Было загадано слово " + word);
+        // // } else if (numberOfAttempts > 0 ) {
+        // //     alert("Отлично! Было загадано слово " + word);
+        // // }
+
+        // showAnswerAndCongratulatePlayer(answerArray);
+
+
+        // Возможно
+        // Свел
+        // 
+
+
+        var pickWord = function () {
+        var words = ["программа", "детерминант", "обезьяна" , "кошка", "компьютер", "волна", "портрет", "корабль", "космос", "интернет", "цепочка", "дротик", "человек", "мандарин", "машина", "автобус", "автомобиль", "озарение", "идея", "страх", "ужас", "номер", "комната", "оружие", "балкон", "терраса",  "картина", "светофор", "семафор", "индейка", "курица", "фонарь", "рыба", "фотография", "строка", "огонь", "вода", "сказка", "орудие", "броня", "инновация", "пруд", "речка", "чудовище", "шапка", "нитка", "бочка", "мусор", "останки", "клавиатура", "процессор", "блок", "видеокарта", "наушники", "портфель", "банка", "мозг", "рука", "конфета"];
+        return words[Math.floor(Math.random() * words.length)];
+        };
+
+        var setupAnswerArray = function (word) {
+        var answerArray = []
+        for (var i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+        }
+
+        return answerArray;
+        };
+
+        var showPlayerProgress = function (answerArray) {
+        alert(answerArray.join(" "));
+        };
+
+        var getGuess = function () {
+        return prompt("Угадайте букву или нажмите Отмена для выхода из игры");
+        };
+
+        var updateGameState = function (guess, word, answerArray) {
+        var appearances = 0;
+        for (var j = 0; j < word.length; j++) {
+        if (word[j] === guess && answerArray[j] !== guess) {
+        answerArray[j] = guess;
+        appearances++;
+        }
+        }
+
+        return appearances;
+        };
+
+        var showAnswerAndCongratulatePlayer = function (answerArray, numberAttempt) {
+        showPlayerProgress(answerArray);
+
+        };
+
+        var word = pickWord();
+        var answerArray = setupAnswerArray(word);
+        var remainingLetters = word.length;
+        var numberAttempt = 5;
+
+        while (remainingLetters > 0 && numberAttempt > 0) { showPlayerProgress(answerArray); var guess = getGuess();
+        if (guess === null) {
+        break;
+        } else if (guess.length !== 1) {
+        alert("Пожалуйста, введите только одну букву.");
+        } else {
+        guess = guess.toLowerCase();
+        var correctGuesses = updateGameState(guess, word, answerArray);
+        remainingLetters -= correctGuesses;
+        if(!correctGuesses) numberAttempt--;
+        alert("осталось " +numberAttempt+ " попыток");
+        }
+        }
+
+        alert(answerArray.join(" "));
+
+        if (numberAttempt > 0) {
+        alert("Отлично! Было загадано слово " + word);
+        } else {
+        alert("Плохо! Вас повесили! Было загадано слово " + word);
+        }
+
+        showAnswerAndCongratulatePlayer(answerArray);
+    </script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+// COLOR
+@orange: #fcac45;
+@grey: #6c6c6c;
+@black: #111111;
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #222222;
+}
+// Base setting
+
+.title__section{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    &:after{
+        content: '';
+        display: block;
+        background: @orange;
+        height: 5px;
+        width: 100px;
+        margin: 20px auto auto auto;
+    }
+}
+
+
+// header
+.navbar{
+    background: @black;
+    padding: 50px 0;
+}
+
+.navbar-brand{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    &:hover{
+        color: #fff;
+    }
+}
+
+.navbar-toggler{
+    .navbar-toggler-icon{
+        font-size: 32px;
+        padding: 4px 0 0 0;
+    }
+}
+
+.navbar-nav{
+    text-transform: uppercase;
+    .nav-item{
+        .nav-link{
+            height: 45px;
+            color: #fff;
+            font-weight: bold;
+            margin-right: 20px;
+            font-size: 14px;
+            &:hover{
+                border-bottom: 4px solid @orange;
+            }
+        }
+    }
+}
+
+// MAIN //
+
+.main__welcome{
+    background: @black;
+}
+
+.title{
+    text-align: center;
+    color: #fff;
+    padding: 200px 0 250px 0;
+}
+
+.title__heading{
+    h1{
+        text-transform: uppercase;
+        font-weight: 300;
+        span{
+            color: @orange;
+            font-weight: bold;
+        }
+    }
+}
+
+.title__desc{
+    p{
+        font-weight: 300;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+// ABOUT US
+
+.about__left{
+    padding: 100px 0;
+}
+
+.about__right{
+    padding: 130px 60px;
+    h1{
+        display: inline-block;
+        font-size: 34px;
+        text-transform: uppercase;
+        border-bottom: 3px solid @orange;
+        padding-bottom: 20px;
+        span{
+            font-weight: bold;
+        }
+    }
+    p{
+        color: @grey;
+        padding-top: 30px;
+        font-weight: 300;
+    }
+    ul{
+        padding: 0;
+        color: @grey;
+        li{
+            font-style: italic;
+            list-style: none;
+            background: url(/img/mark.png) 0px no-repeat;
+            padding-left: 20px;
+            span{
+                font-weight: 600;
+                font-style: normal;
+            }
+        }
+    }
+}
+
+// TEAM
+.main__team{
+    background: @black;
+    color: #fff;
+    padding: 100px 0 165px 0;
+}
+.team__cards{
+    margin-top: 100px;
+}
+.cards{
+    text-align: center;
+    padding: 0 10px 0 10px;
+    .photo{
+        width: 130px;
+        border-radius: 50%;
+        background: #d7d7d7;
+        margin: aut
+    }
+    .name{
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    .position{
+        font-weight: 300;
+    }
+    .about__position{
+        font-size: 14px;
+    }
+}
+
+// SERVICES
+.main__services{
+    padding: 100px 0;
+    h1{
+        font-weight: 400;
+    }
+    .services__description{
+        margin-top: 55px;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        font-size: 0.9em;
+        color: #6c6c6c;
+    }
+    .services__cards{
+        .cards{
+            margin-top: 100px;
+            h4{
+                margin-top: 30px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+// OUR CLIENTS 
+.main__clients{
+    background: @black;
+    color: #fff;
+    padding: 100px 0 150px 0;
+    text-align: center;
+    h1{
+        span{
+            font-weight: 300;
+        }
+    }
+    .clients__logos{
+        padding: 0 80px;
+        img{
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+    }
+}
+// OUR WORK
+.main__work{
+    padding: 100px 0;
+    text-align: center;
+    h1{
+        span{
+            font-weight: 300;
+        }
+    }
+    .work__description{
+        margin-top: 55px;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        font-size: 0.9em;
+        color: #6c6c6c;
+    }
+    .gallery{
+        margin-top: 150px;
+        img{
+            margin-left: 10px;
+            margin-top: 10px;
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+    }
+}
+// TESTIMONIALS
+.main__testimonials{
+    background: @black;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    h1{
+        span{
+            font-weight: 300;
+        }
+    }
+    .testimonials{
+        color: #e7e7e7;
+        font-weight: 600;
+        padding: 0 100px;
+        text-transform: uppercase;
+        margin-top: 110px;
+    }
+    .testimonials__autor{
+        color: #b2b2b2;
+        font-weight: 600;
+        span{
+            font-weight: 300;
+        }
+    }
+}
+// CONTACT
+.main__contact{
+    padding: 100px 0;
+    .contact__block{
+        margin-top: 50px;
+        padding: 0 100px;
+        p{
+            font-style: italic;
+            color: #6c6c6c;
+            text-align: center;
+        }
+        .contact__form{
+            margin-top: 100px;
+            font-size: 14px;
+            color: #636363;
+            form{
+                label{
+                    &:after{
+                        content: '*';
+                        color: red;
+                        margin-left: 5px;;
+                    }
+                }
+                input{
+                    border-radius: 0%;
+                    border-color: #666;
+                }
+                textarea{
+                    border-radius: 0%;
+                    border-color: #666;
+                }
+                .btn{
+                    color: #fff;
+                    font-weight: 600;
+                    background: @orange;
+                    border-radius: 0%;
+                    padding: 10px 55px;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+// FOOTER
+footer{
+    padding: 30px 0;
+    background: #222;
+    .socials{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .socials__item{
+            a{
+                display: block;
+                width: 32px;
+                height: 32px;
+                margin-left: 10px;
+            }
+            .facebook{
+                background: url(/img/facebook.png) 0px no-repeat;
+            }
+            .twitter{
+                background: url(/img/twitter.png) -1px no-repeat;
+            }
+            .google{
+                background: url(/img/google.png) 0px no-repeat;
+            }
+            .linkedin{
+                background: url(/img/linkedin.png) 0px no-repeat;
+            }
+            .drib{
+                background: url(/img/dribbble.png) 0px no-repeat;
+            }   
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar{
+        padding: 20px 0;
+    }
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                &:hover{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .about__left{
+        text-align: center;
+        padding: 50px 0;
+    }
+    .about__right{
+        padding: 50px;
+        text-align: center;
+        ul{
+            li{
+                padding: 5px 0 5px 20px;
+                text-align: left;
+            }
+        }
+    }
+    .main__clients{
+        .clients__logos{
+            margin-top: 50px;
+            .logo{
+                padding: 50px 0 0 0;
+                text-align: center;
+            }
+        }
+    }
+    .main__services{
+        .services__cards{
+            .cards{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .main__clients{
+        padding-bottom: 80px;
+        .clients__logos{
+            img{
+                margin-left: 0;
+                padding: 0 20px;
+            }
+        }
+    }
+    .main__work{
+        .gallery{
+            margin-top: 50px;
+            .line_1 {
+                img{
+                    margin: 5px;
+                    &:not(:first-child){
+                        display: none;
+                    }
+                }
+            }
+            .line_2 {
+                img{
+                    margin: 5px;
+                    &:not(:first-child){
+                        display: none;
+                    }
+                }
+            }
+            .line_3 {
+                img{
+                    margin: 5px;
+                    &:not(:first-child){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .cards{
+        padding: 20px 100px 20px 100px;
+    }
+    .main__testimonials{
+        .testimonials{
+            color: #e7e7e7;
+            font-weight: 600;
+            padding: 0;
+            text-transform: uppercase;
+            margin-top: 50px;
+        }
+    }
+    .main__contact{
+        padding: 100px 0;
+        .contact__block{
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width: 525px) {
+
+    .navbar-brand{
+        padding-left: 50px;
+    }
+    .navbar-nav{
+        padding-left: 50px;
+    }
+    .title{
+        padding: 100px 0 150px 0;
+    }
+    .title__heading{
+        h1{
+            font-size: 30px;
+        }
+    }
+    .title__desc{
+        p{
+            font-size: 14px;
+        }
+    }
+    .about__left{
+        img{
+            max-width: 100%;
+        }
+    }
+    .about__right{
+        padding: 50px 0;
+        text-align: center;
+        h1{
+            width: 300px;
+        }
+        ul{
+            li{
+                padding: 5px 0 5px 25px;
+                text-align: left;
+            }
+        }
+    }
+    .main__clients{
+        .clients__logos{
+            padding: 0;
+        }
+    }
+}

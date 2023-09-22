@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let users = [{
+            name: 'Administrator',
+            login: 'admin',
+            password: 'admin'
+        },{
+            name: 'Maksim',
+            login: 'maks',
+            password: '322'
+        }];
+
+        let promptLogin = prompt('Введите логин');
+        let flag = false;
+        let status = [];
+
+        users.forEach(function(user) {
+            if (promptLogin == user.login){
+                flag = true;
+                let promptPassword = prompt('Введите пароль');
+                    if (promptPassword == user.password && flag == true){
+                        status = "Здравствуйте, " + user.name;
+                    } else if(promptPassword != null){
+                        status = "Ошибка аунтификации!";
+                    }
+            } else if(flag == false){
+                status = "Ошибка аунтификации!";
+            }
+        });
+        
+        alert(status);
+        
+    </script>
+</body>
+</html>
