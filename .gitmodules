@@ -1,0 +1,3 @@
+[submodule "ProfiPrint"]
+	path = ProfiPrint
+	url = https://github.com/Klip5a/ProfiPrint.git
